@@ -1,11 +1,11 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # Simple CLI for shell-color-scripts
 
-DIR_COLORSCRIPTS="/opt/shell-color-scripts/colorscripts"
+DIR_COLORSCRIPTS="${HOME}/software/color/shell-color-scripts/colorscripts"
 fmt_help="  %-20s\t%-54s\n"
-list_colorscripts="$(/usr/bin/ls "${DIR_COLORSCRIPTS}" | cut -d ' ' -f 1 | nl)"
-length_colorscripts="$(/usr/bin/ls "${DIR_COLORSCRIPTS}" | wc -l)"
+list_colorscripts="$(ls "${DIR_COLORSCRIPTS}" | cut -d ' ' -f 1 | nl)"
+length_colorscripts="$(ls "${DIR_COLORSCRIPTS}" | wc -l)"
 function _help() {
     echo "Description: A collection of terminal color scripts."
     echo ""
